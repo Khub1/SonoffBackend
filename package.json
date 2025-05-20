@@ -1,0 +1,32 @@
+{
+  "name": "ewelink-typescript",
+  "version": "1.0.0",
+  "description": "TypeScript version of Ewelink project",
+  "main": "dist/presentation/main.js",
+  "scripts": {
+    "start": "ts-node src/presentation/main.ts",
+    "build": "tsc",
+    "dev": "nodemon --exec ts-node src/presentation/main.ts",
+    "create-tables-pg": "ts-node src/infrastructure/database/pg-client.ts",
+    "create-tables-mssql": "ts-node src/infrastructure/database/mssql-client.ts"
+  },
+  "dependencies": {
+    "arpping": "git+https://github.com/skydiver/arpping.git",
+    "axios": "^1.9.0",
+    "crypto-js": "^4.2.0",
+    "db-migrate-pg": "^1.5.2",
+    "dotenv": "^16.4.5",
+    "ewelink-api": "^3.1.1",
+    "mssql": "^11.0.1",
+    "pg": "^8.11.3",
+    "pg-cloudflare": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/mssql": "^9.1.7",
+    "@types/node": "^20.12.7",
+    "@types/pg": "^8.10.9",
+    "nodemon": "^3.0.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
